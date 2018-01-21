@@ -3,5 +3,4 @@ CS 362. SOFTWARE ENGINEERING II Winter 2018 (Ecampus-Distance Education)
 <<<<<<< Updated upstream
 =======
 
-Courtney Curtis modified this for assignment 1.
->>>>>>> Stashed changes
+Courtney Curtis modified this for assignment 2.
