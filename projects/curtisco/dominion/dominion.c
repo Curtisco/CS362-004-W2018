@@ -755,10 +755,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch ( card )
   {
   case adventurer:
-    adventurer_card(drawntreasure, gameState *state, currentPlayer, cardDrawn, temphand[], z);
+    adventurer_card(drawntreasure, state, currentPlayer, cardDrawn, temphand, z);
 
   case council_room:
-    council_room_card(i, gameState *state, currentPlayer,ChandPos);
+    council_room_card(i, state, currentPlayer, handPos);
 
   case feast:
     //gain card with cost up to 5
@@ -878,10 +878,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     return 0;
 
   case smithy:
-    smithy_card(i, gameState *state, currentPlayer, handPos);
+    smithy_card(i, state, currentPlayer, handPos);
 
   case village:
-    village_card(gameState *state, currentPlayer, handPos);
+    village_card(state, currentPlayer, handPos);
 
   case baron:
     state->numBuys++;//Increase buys by 1!
@@ -935,7 +935,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     return 0;
 
   case great_hall:
-    great_hall_card(gameState *state, currentPlayer, handPos);
+    great_hall_card(state, currentPlayer, handPos);
 
   case minion:
     //+1 action
