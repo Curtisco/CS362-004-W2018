@@ -682,7 +682,7 @@ int smithy_card(int i, struct gameState *state, int currentPlayer, int handPos){
 
 int council_room_card(int i, struct gameState *state, int currentPlayer, int handPos){
   //+4 Cards
-  for (i = 0; i < 4; i++) 
+  for (i = 0; i < 5; i++)       //THIS IS THE BUG
   {
     drawCard(currentPlayer, state);
   }
@@ -722,7 +722,7 @@ int great_hall_card(struct gameState *state, int currentPlayer, int handPos){
   drawCard(currentPlayer, state);
 
   //+1 Actions
-  (state->numActions++)++;      //THIS IS THE BUG
+  state->numActions = state->numActions + 1; 
 
   //discard card from hand
   discardCard(handPos, currentPlayer, state, 0);
