@@ -29,6 +29,7 @@ int main(){
 	choice1 = 0;
 	choice2 = 0;
 	choice3 = 0;
+	handPos = 0;
 
 	initializeGame(numPlayers, k, seed, &S);
 	S.whoseTurn = 0;
@@ -39,8 +40,8 @@ int main(){
 	cardEffect(great_hall, choice1, choice2, choice3, &testState, handPos, &bonus);
 
 	con = S.handCount[0] - testState.handCount[0];
-	printf("Testing 1 Card Drawn: Expected Value: 1 card, Returned Value: %d cards, Result: ", con);
-	testing(con, 1);
+	printf("Testing 1 Card Drawn after Card Played: Expected Value: 0 card, Returned Value: %d cards, Result: ", con);
+	testing(con, 0);
 
 	con = testState.numActions - S.numActions;
 	printf("Testing 1 More Actions: Expected Value: 1 Actions, Returned Value: %d Actions, Result: ", con);

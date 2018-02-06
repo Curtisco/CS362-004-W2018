@@ -29,6 +29,7 @@ int main(){
 	choice1 = 0;
 	choice2 = 0;
 	choice3 = 0;
+	handPos = 0;
 
 	printf("\n~~~~~~~~~~ Now Testing smithy_card Please Wait ~~~~~~~~~~\n\n");
 

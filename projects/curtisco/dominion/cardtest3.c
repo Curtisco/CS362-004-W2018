@@ -29,6 +29,7 @@ int main(){
 	choice1 = 0;
 	choice2 = 0;
 	choice3 = 0;
+	handPos = 0;
 
 	initializeGame(numPlayers, k, seed, &S);
 	S.whoseTurn = 0;
