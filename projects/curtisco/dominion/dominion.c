@@ -661,7 +661,7 @@ int adventurer_card(int drawntreasure, struct gameState *state, int currentPlaye
       z++;
     }
   }
-  while (z - 1 > 0) {       //THIS IS THE BUG
+  while (z - 1 >=0) {       //THIS IS THE BUG
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[z - 1]; // discard all cards in play that have been drawn
     z = z - 1;
   }
@@ -670,7 +670,7 @@ int adventurer_card(int drawntreasure, struct gameState *state, int currentPlaye
 
 int smithy_card(int i, struct gameState *state, int currentPlayer, int handPos){
   //+3 Cards
-  for (i = 0; i < 6; i++)       //THIS IS THE BUG
+  for (i = 0; i < 3; i++)       //THIS IS THE BUG
   {
     drawCard(currentPlayer, state);
   }
@@ -682,7 +682,7 @@ int smithy_card(int i, struct gameState *state, int currentPlayer, int handPos){
 
 int council_room_card(int i, struct gameState *state, int currentPlayer, int handPos){
   //+4 Cards
-  for (i = 0; i < 5; i++)       //THIS IS THE BUG
+  for (i = 0; i < 4; i++)       //THIS IS THE BUG
   {
     drawCard(currentPlayer, state);
   }
@@ -710,7 +710,7 @@ int village_card(struct gameState *state, int currentPlayer, int handPos){
   drawCard(currentPlayer, state);
 
   //+2 Actions
-  state->numActions = state->numActions + 1;      //THIS IS THE BUG
+  state->numActions = state->numActions + 2;      //THIS IS THE BUG
 
   //discard played card from hand
   discardCard(handPos, currentPlayer, state, 0);
@@ -722,7 +722,7 @@ int great_hall_card(struct gameState *state, int currentPlayer, int handPos){
   drawCard(currentPlayer, state);
 
   //+1 Actions
-  state->numActions = state->numActions + 1; 
+  state->numActions++; 
 
   //discard card from hand
   discardCard(handPos, currentPlayer, state, 0);

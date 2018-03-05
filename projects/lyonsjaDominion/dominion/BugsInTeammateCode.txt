@@ -1,0 +1,5 @@
+Bug1: The smithy card decreased the deck by 4 instead of 3 as done by my cardtest2 code. This makes sense since when you look at the code for the smithy card you can see that the for loop was changed to draw an extra card.
+
+Bug2: The village card did not draw a card according to my cardtest3 code. I did not find a reason in his code that would cause the village card to not draw a card but I did find that the village card did have a bug that caused the village card to be trashed rather than discarded.
+
+Bug3: The adventurer card does not discard 1 card but varying amounts. It also did not lose two cards total from the deck and discard pile but many also varying amounts. This was found by the code supplied by the teacher. When looking at the code I found that one of the for loops was changed so that the card would not discard the correct number of cards. I am not sure why the number varied so much though.
